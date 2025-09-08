@@ -25,7 +25,8 @@ export const purchaseCourse = async (req, res) => {
         res.status(201).json({message: "Course successfully Purchased"})
         
     } catch (err) {
-        res.status(500).json({message: "Purchase failed"})
+        next(err)
+        // res.status(500).json({message: "Purchase failed"})
     }
 
 }
@@ -41,6 +42,7 @@ export const getMyPurchases = async(req,res) => {
 
         
     } catch (err) {
-        res.status(500).json({message:"Error getting Purchases"})
+        // res.status(500).json({message:"Error getting Purchases"})
+        next(err)
     }
 }

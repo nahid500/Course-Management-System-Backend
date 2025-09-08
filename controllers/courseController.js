@@ -17,7 +17,8 @@ export const createCourse = async (req, res) => {
     }
 
     catch(err){
-        console.log(err);
+        // console.log(err);
+        next(err)
     }
 
 }
@@ -28,7 +29,8 @@ export const getAllCourses = async (req, res) => {
         res.status(200).json(courses)
 
     } catch (err) {
-        console.log(err);
+        // console.log(err);
+        next(err)
         
     } 
 }
@@ -43,7 +45,8 @@ export const getSingleCourse = async (req, res) => {
         res.status(200).json(course)
 
     } catch (err) {
-        res.status(500).json({message: "Course not Found"})
+        // res.status(500).json({message: "Course not Found"})
+        next(err)
     }
 }
 
@@ -57,7 +60,8 @@ export const deleteCourse = async (req, res) => {
 
         res.status(200).json({message: "Course deleted successfully"})
     } catch (err) {
-        res.status(500).json({message: "Error deleting Course"})
+        // res.status(500).json({message: "Error deleting Course"})
+        next(err)
         
     }
 }

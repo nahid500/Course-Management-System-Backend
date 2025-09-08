@@ -5,7 +5,7 @@ import mongoose from 'mongoose'
 import authRoutes from './routes/authRoutes.js'
 import courseRoutes from './routes/courseRoutes.js'
 import purchaseRoutes from './routes/purchaseRoutes.js'
-
+import errorHandler from './middlewares/errorHandler.js'
 
 
 dotenv.config()
@@ -27,7 +27,7 @@ app.use('/auth', authRoutes)
 app.use('/courses', courseRoutes)
 app.use('/purchase', purchaseRoutes)
 
-
+app.use(errorHandler)
 
 
 const PORT = process.env.PORT

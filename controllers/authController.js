@@ -4,6 +4,10 @@ import { generateAccessToken, generateRefreshToken } from "../utils/token.js"
 
 
 export const register = async (req, res) => {
+
+    try {
+        
+
     const {name, email, password} = req.body
 
     const existing = await User.findOne({email})
@@ -19,10 +23,18 @@ export const register = async (req, res) => {
         email: user.email,
         role: user.role,
         message: "Registration Successful"})
+
+    } catch (error) {
+        next(err)
     }
+    }
+
 
 export const login = async(req,res) => {
 
+    try {
+        
+    
     const {email,password} = req.body
     const user = await User.findOne({email})
     if(!user) 
@@ -42,6 +54,10 @@ export const login = async(req,res) => {
         accessToken,
         refreshToken,
         message: "Logged in Successfully"})
+
+    } catch (error) {
+        next(err)
+    }
 }
 
 export const logout = async(req,res) => {
