@@ -107,7 +107,7 @@ Get Single Course:  http://localhost:5000/courses/68bf0b2323590eb5c64c8feb  <br>
 }
 
 
-Purchase Course:  68bf0b2323590eb5c64c8feb  <br>
+Purchase Course:  http://localhost:5000/purchase/buy/68bf0b2323590eb5c64c8feb  <br>
 {
     "courseId": "68bf0b2323590eb5c64c8feb"
 }  <br>
@@ -151,6 +151,7 @@ Authorization-> Bearer <user_token_here> <br>
         }
     ]
 }
+
 
 
 
