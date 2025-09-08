@@ -69,7 +69,8 @@ Create Course(only admin):  http://localhost:5000/courses/create  <br>
 {
     "message": "Course Created Successfully"
 }
-Delete Course(only admin): http://localhost:5000/courses/68bed216c7d656771756e299
+
+Delete Course(only admin): http://localhost:5000/courses/68bed216c7d656771756e299  <br>
 Authorization-> Bearer <admin_token_here>
 {
     "message": "Course deleted successfully"
@@ -150,6 +151,7 @@ Authorization-> Bearer <user_token_here>
         }
     ]
 }
+
 
 
 
