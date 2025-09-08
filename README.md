@@ -9,25 +9,26 @@ Finally, purchase operations have being implemented where users can purchase cou
 
 
 ## Installation guide:
- 1) Clone the repository: git clone https://github.com/nahid500/Course-Management-System-Backend.git <br>
-                          cd Course-Management-System-Backend
+ 1) Clone the repository: <br>
+ git clone https://github.com/nahid500/Course-Management-System-Backend.git <br>
+ cd Course-Management-System-Backend
 
  2) Install dependencies: npm install
 
- 3) Create a .env file with values:
-     PORT = 5000
-     MONGO_URI = mongodb+srv://nahid95622_db_user:GAEhNW6rtqVSlyVW@coursecluster.l3vlgdx.mongodb.net/     
-     JWT_SECRET = 3krkoui27gn7cesvi796iyk25o69xoyr
-     JWT_EXPIRY = 12h
-     JWT_REFRESH_SECRET = 3krkoui27gn7cesvi796iyk25o69xoyr
-     REFRESH_TOKEN_EXPIRY = 5d
+ 3) Create a .env file with values: <br>
+     PORT = 5000 <br>
+     MONGO_URI = mongodb+srv://nahid95622_db_user:GAEhNW6rtqVSlyVW@coursecluster.l3vlgdx.mongodb.net/   <br>
+     JWT_SECRET = 3krkoui27gn7cesvi796iyk25o69xoyr <br>
+     JWT_EXPIRY = 12h <br>
+     JWT_REFRESH_SECRET = 3krkoui27gn7cesvi796iyk25o69xoyr <br>
+     REFRESH_TOKEN_EXPIRY = 5d <br>
 
- 4) Run the project locally: npm run dev
+ 4) Run the project locally: npm run dev <br>
 
 
 ## API endpoints with example requests/responses.:
 
-http://localhost:5000/auth/register
+Register:  http://localhost:5000/auth/register <br>
 {
     "name": "user2",
     "email": "user2@gmail.com",
@@ -41,7 +42,7 @@ http://localhost:5000/auth/register
     "message": "Registration Successful"
 }
 
-Login:  http://localhost:5000/auth/login
+Login:  http://localhost:5000/auth/login  <br>
 {
     "email": "user2@gmail.com",
     "password": "user123"
@@ -52,13 +53,13 @@ Login:  http://localhost:5000/auth/login
     "message": "Logged in Successfully"
 }
 
-Logout:  http://localhost:5000/auth/logout
+Logout:  http://localhost:5000/auth/logout  <br>
 Authorization-> Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YmViN2Q4NWY5Zjg5ZTYzZTQ3NTE0MyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU3MzI5NDM4LCJleHAiOjE3NTczNzI2Mzh9.VyuN_e5NxwUqGle7L71XvNZOthYdQ32aHCtzI36jd-s
 {
     "message": "Logged Out Successfully "
 }
 
-Create Course(only admin):  http://localhost:5000/courses/create
+Create Course(only admin):  http://localhost:5000/courses/create  <br>
 {
     "title": "PowerBI",
     "description": "PowerBI is very important for data analytics",
@@ -74,7 +75,7 @@ Authorization-> Bearer <admin_token_here>
     "message": "Course deleted successfully"
 }
 
-Get All Courses:  http://localhost:5000/courses/
+Get All Courses:  http://localhost:5000/courses/  <br>
 [
     {
         "_id": "68bed237c7d656771756e29b",
@@ -94,7 +95,7 @@ Get All Courses:  http://localhost:5000/courses/
     }
 ]
 
-Get Single Course:  http://localhost:5000/courses/68bf0b2323590eb5c64c8feb
+Get Single Course:  http://localhost:5000/courses/68bf0b2323590eb5c64c8feb  <br>
 {
     "_id": "68bf0b2323590eb5c64c8feb",
     "title": "PowerBI",
@@ -105,7 +106,7 @@ Get Single Course:  http://localhost:5000/courses/68bf0b2323590eb5c64c8feb
 }
 
 
-Purchase Course:  68bf0b2323590eb5c64c8feb
+Purchase Course:  68bf0b2323590eb5c64c8feb  <br>
 {
     "courseId": "68bf0b2323590eb5c64c8feb"
 }
@@ -113,7 +114,7 @@ Purchase Course:  68bf0b2323590eb5c64c8feb
     "message": "Course successfully Purchased"
 }
 
-My All Purchases:  http://localhost:5000/purchase/my-purchases
+My All Purchases:  http://localhost:5000/purchase/my-purchases  <br>
 Authorization-> Bearer <user_token_here>
 {
     "purchases": [
@@ -149,6 +150,7 @@ Authorization-> Bearer <user_token_here>
         }
     ]
 }
+
 
 
 
