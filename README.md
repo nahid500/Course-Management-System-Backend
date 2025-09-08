@@ -9,7 +9,7 @@ Finally, purchase operations have being implemented where users can purchase cou
 
 
 ## Installation guide:
- 1) Clone the repository: git clone https://github.com/nahid500/Course-Management-System-Backend.git
+ 1) Clone the repository: git clone https://github.com/nahid500/Course-Management-System-Backend.git <br>
                           cd Course-Management-System-Backend
 
  2) Install dependencies: npm install
@@ -149,6 +149,7 @@ Authorization-> Bearer <user_token_here>
         }
     ]
 }
+
 
 
 
