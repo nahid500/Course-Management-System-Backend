@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import authRoutes from './routes/authRoutes.js'
 import courseRoutes from './routes/courseRoutes.js'
+import purchaseRoutes from './routes/purchaseRoutes.js'
 
 
 
@@ -24,7 +25,7 @@ app.get('/', (req,res) => {
 
 app.use('/auth', authRoutes)
 app.use('/courses', courseRoutes)
-
+app.use('/purchase', purchaseRoutes)
 
 
 

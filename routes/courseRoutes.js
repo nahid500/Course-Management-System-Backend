@@ -1,9 +1,9 @@
-import exprss from 'express'
+import express from 'express'
 import { authMiddleware } from '../middlewares/authMiddleware.js'
 import {createCourse, getAllCourses, getSingleCourse, deleteCourse} from '../controllers/courseController.js'
 import {requiredRole} from '../middlewares/roleMiddleware.js'
 
-const router = exprss.Router()
+const router = express.Router()
 
 
 router.post('/create', authMiddleware, requiredRole('admin'), createCourse)
